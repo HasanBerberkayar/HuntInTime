@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Dog : MonoBehaviour
 {
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,12 +21,18 @@ public class Dog : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            int r = Random.Range(0, 3);
-            while(r == ChangeTime.time)
+            float distanceX = Mathf.Abs(player.transform.position.x - transform.position.x);
+            float distanceY = Mathf.Abs(player.transform.position.y - transform.position.y);
+
+            if (distanceX <= 1.2 && distanceY <= 1.2)
             {
-                r = Random.Range(0, 3);
-            }
-            ChangeTime.time = r;
+                int r = Random.Range(0, 3);
+                while (r == ChangeTime.time)
+                {
+                    r = Random.Range(0, 3);
+                }
+                ChangeTime.time = r;
+            }           
         }
 
     }
