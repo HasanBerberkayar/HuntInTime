@@ -64,4 +64,11 @@ public class Player : Creature
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("a");
+        other.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+        other.gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
+    }
+    
 }

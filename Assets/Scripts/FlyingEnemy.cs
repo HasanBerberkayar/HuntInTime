@@ -15,10 +15,15 @@ public class FlyingEnemy : Creature
 
     public float skyLimit;
 
+    public LayerMask ignoreLayer1;
+    public LayerMask ignoreLayer2;
 
+    public LayerMask ignoreLayer;
+    Vector3 rayDirection;
     // Start is called before the first frame update
     void Start()
     {
+        ignoreLayer = ignoreLayer1 | ignoreLayer2;
         anim = GetComponent<Animator>();
         currentHealth = maxHealth;
         deathAnimation = 1.8f;
@@ -32,17 +37,26 @@ public class FlyingEnemy : Creature
     {
         attackTimer += Time.deltaTime;
         Die();
+        if(transform.rotation.y == 0)
+        {
+            rayDirection = Quaternion.Euler(0, 0, -45) * transform.right;
+        }       
+        else
+        {
+            rayDirection = Quaternion.Euler(0, 0, 45) * transform.right;           
+        }
+        RaycastHit2D hit = Physics2D.Raycast(transform.position + (0.6f * rayDirection), rayDirection, attackDistance, ~ignoreLayer);
 
-        Vector3 rayDirection = Quaternion.Euler(0, 0, 45) * transform.right;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, rayDirection, attackDistance);
+        Debug.DrawLine(transform.position + (0.6f * rayDirection), transform.position + rayDirection * attackDistance , Color.red, ~ignoreLayer);
 
-        if (hit.collider != null)
+        if (hit.collider != null && hit.collider == target.GetComponent<Collider2D>())
         {
             Attack(true);
             isAttacked = true;
         }
         else if (isAttacked)
         {
+            
             if (transform.position.y < skyLimit)
             {
 
@@ -56,10 +70,12 @@ public class FlyingEnemy : Creature
         }
         else if (isSeen)
         {
+            
             FollowEnemy();
         }
         else
         {
+            
             if (transform.position.y < skyLimit)
             {
                 rb2D.velocity = Vector2.up * moveSpeed;
@@ -87,6 +103,7 @@ public class FlyingEnemy : Creature
             {
                 Move(direction);
             }
+
         }
     }
 

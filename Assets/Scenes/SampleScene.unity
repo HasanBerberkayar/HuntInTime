@@ -148,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 123563189}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.46, y: -1.75, z: 0}
+  m_LocalPosition: {x: 1.53, y: -1.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -316,7 +316,7 @@ Transform:
   m_GameObject: {fileID: 500162530}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.56, y: -1.75, z: 0}
+  m_LocalPosition: {x: 0.009999901, y: -0.07000005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -363,7 +363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 518846908}
   - component: {fileID: 518846907}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: ModernDog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -847,6 +847,7 @@ Transform:
   m_Children:
   - {fileID: 594115807}
   - {fileID: 1191568369}
+  - {fileID: 673721750}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &594115806
@@ -962,6 +963,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &673721749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 673721750}
+  - component: {fileID: 673721751}
+  m_Layer: 8
+  m_Name: Collision
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &673721750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673721749}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 562557759}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &673721751
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673721749}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.5881746, y: 4.1983957, z: 1}
+  m_Center: {x: -0.00000031239333, y: -0.024230586, z: 0}
 --- !u!1 &767533843
 GameObject:
   m_ObjectHideFlags: 0
@@ -1040,7 +1094,7 @@ Transform:
   m_GameObject: {fileID: 767533843}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.56, y: -1.75, z: 0}
+  m_LocalPosition: {x: 0.009999901, y: -0.07000005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1103,7 +1157,7 @@ Transform:
   m_GameObject: {fileID: 880346542}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.049999982, y: 0.069999695, z: 0}
+  m_LocalPosition: {x: -2.5, y: 1.7499996, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1141,7 +1195,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.547533, y: -1.8541214}
+  m_Offset: {x: 2.6081462, y: -1.9999099}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1152,7 +1206,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.275956, y: 6.698033}
+  m_Size: {x: 7.807002, y: 8.447495}
   m_EdgeRadius: 0
 --- !u!1 &935117379
 GameObject:
@@ -1173,7 +1227,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &935117380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1193,7 +1247,7 @@ MonoBehaviour:
   deathAnimation: 2
   animattionTimer: 0
   deathCount: 1
-  moveSpeed: 5
+  moveSpeed: 1.5
   direction: 0
   jumpForce: 0
   isGrounded: 0
@@ -1203,7 +1257,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   numOfJump: 0
-  maxNumOfJump: 0
+  maxNumOfJump: 2
   checkAttack: {fileID: 123563190}
   enemyLayer:
     serializedVersion: 2
@@ -1214,12 +1268,21 @@ MonoBehaviour:
   damage: 10
   attackRange: 0.5
   attackDistance: 1
-  rightBorder: 0
-  leftBorder: 0
+  rightBorder: 5
+  leftBorder: -2
   target: {fileID: 0}
   isSeen: 0
   isAttacked: 0
   skyLimit: 2.36
+  ignoreLayer1:
+    serializedVersion: 2
+    m_Bits: 16
+  ignoreLayer2:
+    serializedVersion: 2
+    m_Bits: 128
+  ignoreLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!4 &935117382
 Transform:
   m_ObjectHideFlags: 0
@@ -1229,7 +1292,7 @@ Transform:
   m_GameObject: {fileID: 935117379}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.52, y: 2.31, z: 0}
+  m_LocalPosition: {x: -2.21, y: 1.58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1273,8 +1336,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.5667334, y: -1.7486026}
-  m_Size: {x: 0.9852333, y: 1.9966326}
+  m_Offset: {x: 0.014039278, y: -0.046806812}
+  m_Size: {x: 1.0312276, y: 2.0891013}
   m_Direction: 0
 --- !u!50 &935117384
 Rigidbody2D:
@@ -1327,7 +1390,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 946684888}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: CheckGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1443,7 +1506,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1172027582}
   - component: {fileID: 1172027581}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: MedievalDog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1626,7 +1689,7 @@ Transform:
   m_GameObject: {fileID: 1199554928}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.56, y: -1.75, z: 0}
+  m_LocalPosition: {x: 0.009999901, y: -0.07000005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1642,7 +1705,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1238309754}
   - component: {fileID: 1238309753}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: CyberpunkDog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1741,7 +1804,7 @@ Transform:
   m_GameObject: {fileID: 1470820470}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.56, y: -2.64, z: 0}
+  m_LocalPosition: {x: 0.009999901, y: -0.96000016, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2192,13 +2255,13 @@ GameObject:
   - component: {fileID: 2015012250}
   - component: {fileID: 2015012254}
   - component: {fileID: 2015012253}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Dog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2015012250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2348,6 +2411,7 @@ GameObject:
   - component: {fileID: 2093479201}
   - component: {fileID: 2093479200}
   - component: {fileID: 2093479199}
+  - component: {fileID: 2093479202}
   m_Layer: 7
   m_Name: MeleeEnemy
   m_TagString: Untagged
@@ -2375,7 +2439,7 @@ MonoBehaviour:
   animattionTimer: 0
   deathCount: 1
   moveSpeed: 5
-  direction: 0
+  direction: 1
   jumpForce: 5
   isGrounded: 0
   checkGround: {fileID: 835265062}
@@ -2399,6 +2463,15 @@ MonoBehaviour:
   rightBorder: 7.5
   leftBorder: -0.35
   target: {fileID: 0}
+  ignoreLayer1:
+    serializedVersion: 2
+    m_Bits: 16
+  ignoreLayer2:
+    serializedVersion: 2
+    m_Bits: 128
+  ignoreLayer:
+    serializedVersion: 2
+    m_Bits: 16
 --- !u!4 &2093479198
 Transform:
   m_ObjectHideFlags: 0
@@ -2408,7 +2481,7 @@ Transform:
   m_GameObject: {fileID: 2093479195}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.78, y: -1.83, z: 0}
+  m_LocalPosition: {x: 3.98, y: -1.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2496,6 +2569,58 @@ MonoBehaviour:
   medievalObject: {fileID: 1640607437}
   modernObject: {fileID: 1642122183}
   CyberpunkObject: {fileID: 221521424}
+--- !u!212 &2093479202
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093479195}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 2}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
