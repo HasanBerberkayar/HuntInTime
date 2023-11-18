@@ -48,6 +48,8 @@ public class Player : Creature
         if (Input.GetKeyDown((KeyCode.LeftShift)) && dashCoolDown <= dashTimer)
         {
             moveSpeed = 20;
+            this.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+            this.gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
             StartCoroutine(Waiter(0.2f, "Dash"));
             Move(direction);
         }
@@ -61,14 +63,9 @@ public class Player : Creature
         {
             dashTimer = 0;
             moveSpeed = 5;
+            this.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
+            this.gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
         }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("a");
-        other.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
-        other.gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
     }
     
 }

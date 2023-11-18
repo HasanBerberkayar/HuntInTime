@@ -717,7 +717,7 @@ MonoBehaviour:
   attackTimer: 0
   damage: 10
   attackRange: 0.5
-  dashCoolDown: 3
+  dashCoolDown: 1
 --- !u!50 &562557756
 Rigidbody2D:
   serializedVersion: 4
