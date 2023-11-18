@@ -69,34 +69,45 @@ public class Creature : MonoBehaviour, IDamageable
 
             if (deathCount <= 0)
             {
-                rb2D.velocity = Vector2.zero;
+                /*
                 if (this.gameObject.name == "FlyingEnemy")
                 {
                     if (!isGrounded)
                     {
-                        GetComponent<Rigidbody2D>().isKinematic = false;
+                        GetComponent<Rigidbody2D>().isKinematic = false;                       
                     }
                     else
                     {
                         GetComponent<Rigidbody2D>().isKinematic = true;
+                        GetComponent<Collider2D>().enabled = false;
                     }
 
                 }
                 else
                 {
-                    Debug.Log("a");
                     GetComponent<Rigidbody2D>().isKinematic = true;
+                    GetComponent<Collider2D>().enabled = false;
                 }              
-                //anim.SetTrigger("Die");               
-                GetComponent<Collider2D>().enabled = false;
-                while (deathAnimation > animattionTimer)
+                //anim.SetTrigger("Die");                              
+                if(deathAnimation <= animattionTimer)
                 {
-                    animattionTimer += Time.deltaTime;
+                    //GetComponent<Animator>().enabled = false;
+                    this.enabled = false;
+                }   
+                animattionTimer += Time.deltaTime;                           
+                            
+            }*/
+                if(this.gameObject.name == "Player")
+                {
+
                 }
-                //GetComponent<Animator>().enabled = false;
-                this.enabled = false;
-            }                                               
+                else
+                {
+                    this.gameObject.SetActive(false);
+                }
+            }
         }
+
     }
 
     public void DamageEnemy()

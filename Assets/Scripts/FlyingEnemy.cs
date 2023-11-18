@@ -26,7 +26,6 @@ public class FlyingEnemy : Creature
         ignoreLayer = ignoreLayer1 | ignoreLayer2;
         anim = GetComponent<Animator>();
         currentHealth = maxHealth;
-        deathAnimation = 1.8f;
         deathCount = 1;
         rb2D = GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -35,6 +34,7 @@ public class FlyingEnemy : Creature
     // Update is called once per frame
     void Update()
     {
+        isGrounded = Physics2D.OverlapCircle(checkGround.position, distance, isGround);
         attackTimer += Time.deltaTime;
         Die();
         if(transform.rotation.y == 0)
@@ -126,7 +126,20 @@ public class FlyingEnemy : Creature
     {
         if (collision.CompareTag("Player"))
         {
-            isSeen = true;
+            if((target.position.x - transform.position.x > 0 && direction > 0) || (target.position.x - transform.position.x < 0 && direction < 0)) 
+            {
+                isSeen = true;
+            }          
+        }
+    }
+    public void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            if ((target.position.x - transform.position.x > 0 && direction > 0) || (target.position.x - transform.position.x < 0 && direction < 0))
+            {
+                isSeen = true;
+            }
         }
     }
 
