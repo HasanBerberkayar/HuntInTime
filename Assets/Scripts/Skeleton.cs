@@ -54,24 +54,20 @@ public class Skeleton : Creature
         {           
             if (transform.position.x <= leftBorder)
             {
-                Debug.Log("a");
                 direction = 1;
                 Move(direction);
             }
             else if (transform.position.x >= rightBorder)
             {
-                Debug.Log("b");
                 direction = -1;
                 Move(direction);
             }
             else if (direction == 1)
             {
-                Debug.Log("c");
                 Move(direction);
             }
             else
             {
-                Debug.Log("d");
                 Move(direction);
             }
         }         

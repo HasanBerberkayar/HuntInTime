@@ -69,19 +69,33 @@ public class Creature : MonoBehaviour, IDamageable
 
             if (deathCount <= 0)
             {
-                //anim.SetTrigger("Die");
-                GetComponent<Rigidbody2D>().isKinematic = true;
+                rb2D.velocity = Vector2.zero;
+                if (this.gameObject.name == "FlyingEnemy")
+                {
+                    if (!isGrounded)
+                    {
+                        GetComponent<Rigidbody2D>().isKinematic = false;
+                    }
+                    else
+                    {
+                        GetComponent<Rigidbody2D>().isKinematic = true;
+                    }
+
+                }
+                else
+                {
+                    Debug.Log("a");
+                    GetComponent<Rigidbody2D>().isKinematic = true;
+                }              
+                //anim.SetTrigger("Die");               
                 GetComponent<Collider2D>().enabled = false;
-                rb2D.velocity = new Vector2(0f, 0f);
-            }
-
-            animattionTimer += Time.deltaTime;
-
-            if (deathAnimation <= animattionTimer)
-            {
-                GetComponent<Animator>().enabled = false;
+                while (deathAnimation > animattionTimer)
+                {
+                    animattionTimer += Time.deltaTime;
+                }
+                //GetComponent<Animator>().enabled = false;
                 this.enabled = false;
-            }
+            }                                               
         }
     }
 
