@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 70ae534969bd22645aac6f978680a5bd
+guid: 820e6acc2630c194ba9a9ac2f5271750
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: degirmen_ve_serif_0
+      name: iki_cal_0
       rect:
         serializedVersion: 2
-        x: 60
-        y: 200
-        width: 291
-        height: 333
+        x: 51
+        y: 142
+        width: 340
+        height: 336
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 427f074028905794081e8d9d48e406bd
-      internalID: -1191589950
+      spriteID: f74fe2bddc37a314e808d4ba45206ae6
+      internalID: 1068463580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: degirmen_ve_serif_1
+      name: iki_cal_1
       rect:
         serializedVersion: 2
-        x: 456
-        y: 203
-        width: 313
-        height: 317
+        x: 476
+        y: 148
+        width: 262
+        height: 206
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fedf0b665839c3c47a1ef88bbb12bac1
-      internalID: 543426958
+      spriteID: ea88842ab3823fb44a1cb692a3e27a7b
+      internalID: -1145064205
       vertices: []
       indices: 
       edges: []
@@ -175,8 +175,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      degirmen_ve_serif_0: -1191589950
-      degirmen_ve_serif_1: 543426958
+      iki_cal_0: 1068463580
+      iki_cal_1: -1145064205
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
